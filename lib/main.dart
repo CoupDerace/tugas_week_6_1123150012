@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
-void main(){
-  runApp(MyApp());
+import 'package:splash/screen/splash_screen_1.dart';
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -9,13 +9,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: "1123150012 , Turtusi",
       theme: ThemeData(
-        useMaterial3: true, 
+        useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home:SplashScreen1(),
+      debugShowCheckedModeBanner: false,
+      home: const MySplashScreen(),
     );
   }
 }
