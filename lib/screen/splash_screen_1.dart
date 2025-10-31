@@ -8,6 +8,8 @@ class MySplashScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Column(
+          //TODO
+          //1.BUAT IMAGE dalam container
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 20),
@@ -15,20 +17,24 @@ class MySplashScreen extends StatelessWidget {
               height: 200,
               width: 200,
               decoration: BoxDecoration(
-                color: Colors.grey,
+                color: Colors.green,
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: AssetImage('assets/image/1.jpg'),
+                  image: AssetImage("assets/image/1.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            SizedBox(height: 15),
-            Text("Welcome to My App", style: TextStyle(fontSize: 22.0)),
-            SizedBox(height: 15),
+            SizedBox(height: 20),
             Text(
-              "Kasih Understand King\n biar people people know",
-              style: TextStyle(fontSize: 22.0),
+              "Welcome",
+              style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 2),
+            Text(
+              "Kasih Understand King\n Biar people people know",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 14.0, color: Colors.green),
             ),
             SizedBox(height: 20),
             Row(
@@ -64,17 +70,29 @@ class MySplashScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20),
-            ),
-            child: SizedBox(
-            ElevatedButton(onPressed: (){}, 
-            child: Text("Continue"),
-            style: TextStyle(
-              fontSize: 12,
+              margin: EdgeInsets.only(left: 40, right: 40),
+              child: SizedBox(
+                height: 25,
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    print("di tekan");
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                  ),
+                  child: Text(
+                    "Continue",
+                    style: TextStyle(fontSize: 12, color: Colors.white),
+                  ),
                 ),
               ),
             ),
           ],
+          //2.BUAT TITLE Welcome
+          //3. buat subtitle lebih kecil warna berbeda
+          //4. buat bulatann kecil ada 3 melebar ( row)
+          //5. buat butto continue dengan warna putih
         ),
       ),
     );
