@@ -6,8 +6,8 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            body: SingleChildScrollView(
-              child: Container(
+            body: Center(
+              child: SingleChildScrollView(
                 padding: const EdgeInsets.all(20.0),
                 child: const Column(
                   children: [
@@ -32,6 +32,11 @@ class Login extends StatelessWidget {
                   SizedBox(height: 10),
                   TextField(
                     keyboardType: TextInputType.emailAddress,
+                    decoration: InputDecoration(
+                      labelText: "Email",
+                      hintText: "Masukkan Email",
+                      prefixIcon: Icon(Icons.email_outlined),
+                    ),
                   ),
                   ],
                 ),
