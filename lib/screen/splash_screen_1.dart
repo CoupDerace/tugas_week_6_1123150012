@@ -10,7 +10,7 @@ class MySplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 20,),
+            SizedBox(height: 20),
             Container(
               height: 200,
               width: 200,
@@ -23,52 +23,57 @@ class MySplashScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 15,),
+            SizedBox(height: 15),
+            Text("Welcome to My App", style: TextStyle(fontSize: 22.0)),
+            SizedBox(height: 15),
             Text(
-              "Welcome to My App",
-              style: TextStyle(
-                fontSize: 22.0,
-              ),
+              "Kasih Understand King\n biar people people know",
+              style: TextStyle(fontSize: 22.0),
             ),
-            SizedBox(height: 15,),
-            Text(
-              "Welcome to My App",
-              style: TextStyle(
-                fontSize: 22.0,
-  ),
-),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-              height: 10,
-              width: 10,
-              decoration: BoxDecoration(
-                color: Colors.green,
-                shape: BoxShape.circle,
+                  height: 10,
+                  width: 10,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    shape: BoxShape.circle,
+                  ),
                 ),
-              ),
-              SizedBox(width: 10),
-                Container(
-              height: 10,
-              width: 10,
-              decoration: BoxDecoration(
-                color: Colors.green[100]!,
-                shape: BoxShape.circle,
-                ),
-              ),
                 SizedBox(width: 10),
                 Container(
-              height: 10,
-              width: 10,
-              decoration: BoxDecoration(
-                color: Colors.green[50]!,
-                shape: BoxShape.circle,
+                  height: 10,
+                  width: 10,
+                  decoration: BoxDecoration(
+                    color: Colors.green[100]!,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+                SizedBox(width: 10),
+                Container(
+                  height: 10,
+                  width: 10,
+                  decoration: BoxDecoration(
+                    color: Colors.green[50]!,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Container(
+              margin: EdgeInsets.only(left: 20, right: 20),
+            ),
+            child: SizedBox(
+            ElevatedButton(onPressed: (){}, 
+            child: Text("Continue"),
+            style: TextStyle(
+              fontSize: 12,
                 ),
               ),
-              ],
-            )
+            ),
           ],
         ),
       ),
