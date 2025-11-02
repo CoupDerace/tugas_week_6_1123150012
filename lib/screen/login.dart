@@ -55,11 +55,12 @@ class Login extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               TextField(
-                keyboardType: TextInputType.emailAddress,
+                obscureText: true,
                 decoration: InputDecoration(
                   labelText: "Password",
                   hintText: "Masukkan Password",
-                  prefixIcon: const Icon(Icons.email_outlined),
+                  prefixIcon: const Icon(Icons.lock_outlined),
+                  suffixIcon: const Icon(Icons.visibility_outlined),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
