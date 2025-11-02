@@ -10,9 +10,14 @@ class Login extends StatelessWidget {
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 5),
-              const Icon(Icons.qr_code_scanner_sharp, size: 60, color: Colors.purple),
+              const SizedBox(height: 10),
+              const Icon(
+                Icons.qr_code_scanner_sharp,
+                size: 60,
+                color: Colors.purple,
+              ),
               const SizedBox(height: 10),
               const Text(
                 "Welkam Brok",
@@ -22,15 +27,14 @@ class Login extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               const Text(
                 "Sung ae login",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: Colors.grey,
-                ),
+                style: TextStyle(fontSize: 16.0, color: Colors.grey),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
+
+              // Email field
               TextField(
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
@@ -46,14 +50,13 @@ class Login extends StatelessWidget {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide(
-                      color: Colors.blue[700]!,
-                      width: 2,
-                    ),
+                    borderSide: BorderSide(color: Colors.blue[700]!, width: 2),
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 15),
+
+              // Password field
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
@@ -70,14 +73,13 @@ class Login extends StatelessWidget {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide(
-                      color: Colors.blue[700]!,
-                      width: 2,
-                    ),
+                    borderSide: BorderSide(color: Colors.blue[700]!, width: 2),
                   ),
                 ),
               ),
-              SizedBox(height: 2),
+              const SizedBox(height: 8),
+
+              // Forgot email
               Align(
                 alignment: Alignment.centerRight,
                 child: Text(
@@ -88,27 +90,48 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
+
+              // Continue button
               Container(
-                margin: EdgeInsets.only(left: 40, right: 40),
+                margin: const EdgeInsets.symmetric(horizontal: 40),
                 child: SizedBox(
-                  height: 25,
+                  height: 40,
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      //call splash screen 2
+                      // TODO: Arahkan ke halaman berikutnya
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
-                    child: Text(
+                    child: const Text(
                       "Continue",
-                      style: TextStyle(fontSize: 12, color: Colors.white),
+                      style: TextStyle(fontSize: 14, color: Colors.white),
                     ),
                   ),
                 ),
               ),
-          ],
+              const SizedBox(height: 25),
+
+              // Divider garis kiri-kanan + teks tengah
+              Row(
+                children: [
+                  Expanded(child: Divider(color: Colors.grey[300])),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Text(
+                      "atau lanjut dengan",
+                      style: TextStyle(color: Colors.grey[600]),
+                    ),
+                  ),
+                  Expanded(child: Divider(color: Colors.grey[300])),
+                ],
+              ),
+            ],
           ),
         ),
       ),
