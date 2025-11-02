@@ -34,7 +34,7 @@ class Login extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Email field
+              // ======== EMAIL FIELD ========
               TextField(
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
@@ -56,7 +56,7 @@ class Login extends StatelessWidget {
               ),
               const SizedBox(height: 15),
 
-              // Password field
+              // ======== PASSWORD FIELD ========
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
@@ -79,7 +79,7 @@ class Login extends StatelessWidget {
               ),
               const SizedBox(height: 8),
 
-              // Forgot email
+              // ======== LUPA EMAIL ========
               Align(
                 alignment: Alignment.centerRight,
                 child: Text(
@@ -92,7 +92,7 @@ class Login extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Continue button
+              // ======== TOMBOL CONTINUE ========
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 40),
                 child: SizedBox(
@@ -117,7 +117,7 @@ class Login extends StatelessWidget {
               ),
               const SizedBox(height: 25),
 
-              // Divider garis kiri-kanan + teks tengah
+              // ======== GARIS PEMBATAS ========
               Row(
                 children: [
                   Expanded(child: Divider(color: Colors.grey[300])),
@@ -133,32 +133,40 @@ class Login extends StatelessWidget {
               ),
               const SizedBox(height: 25),
 
-              OutlinedButton.icon(
-                onPressed: () {
-                  // Aksi ketika tombol Google ditekan
-                },
-                icon: const Icon(
-                  Icons.g_mobiledata,
-                  color: Colors.blue,
-                  size: 28,
-                ),
-                label: const Text(
-                  "Masuk dengan Google",
-                  style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
+              // ======== TOMBOL LOGIN GOOGLE ========
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 40),
+                child: SizedBox(
+                  height: 40,
+                  width: double.infinity,
+                  child: OutlinedButton.icon(
+                    onPressed: () {
+                      // TODO: login dengan Google
+                    },
+                    icon: const Icon(
+                      Icons.g_mobiledata,
+                      color: Colors.red,
+                      size: 28,
+                    ),
+                    label: const Text(
+                      "Masuk dengan Google",
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 12,
+                        horizontal: 20,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      side: const BorderSide(color: Colors.grey, width: 1),
+                    ),
                   ),
-                ),
-                style: OutlinedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 12,
-                    horizontal: 20,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  side: const BorderSide(color: Colors.grey, width: 1),
                 ),
               ),
             ],
